@@ -6,7 +6,7 @@
  *  we use the unary operator & (ampersand) that returns the address of that variable.
  *  For example &x gives us address of variable x.
  *
- *  * (value at address Operator)
+ *  * (value at address Operator / Indirection Operator)
  *  It is a unary * (Asterisk) operator which is used for two things :
  *
  *     1. To declare a pointer variable.
