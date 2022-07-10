@@ -26,7 +26,7 @@
  *
  *        print( v )      23
  *        print( &v )     0x33
- *        print( *(&v) )  23  ( {&v}=address of v | *{ }= value of address {&v} of v )
+ *        print( *(&v) )  23 // "pointer dereferencing" ( {&v}=address of v | *{ }= value of address {&v} of v )
  *        print( &(*v) )  Error because v is not a pointer type variable
  *
  *        print(ptr)  (0x33)
@@ -34,10 +34,14 @@
  *        print(&ptr)  0xFF (pointer self address)
  *
  *        print( &(*ptr) )  0xFF  (Address of variable pointing -> 0xFF[v] )
- *        print( *(&ptr) )  0xFF  (Address of variable pointing -> 0xFF[v] )
+ *        print( *(&ptr) )  0xFF  (Address of variable pointing -> 0xFF[v] ) Dereferencing pointer
+ *
+ *        print(*&*&*&*&*&*&*ptr) // Value of variable V through pointer
+ *        print(&*&*&*&*&*&*&*ptr) // Address of variable V through pointer
  *
  *         Hence in terms of pointer variable " &(*ptr) or *(&ptr) " both are same
  *
+ *         De-referencing a pointer means fetch the value stored in the pointer *&age
  */
 
 #include <stdio.h>
@@ -64,7 +68,7 @@ int main()
 
     printf("The value stored in Pointer age: %d\n", pAge);  // print value stored in pointer variable
     printf("The value of age using *pointer: %d\n", *pAge); // print value of age using pointer variable
-
+                                                            // Pointer dereferencing *pAge
     printf("\nPointer Tricks\n");
     printf(" *(&age): %d\n", *(&age)); // *(&normal-variable) => 21 (The value of age)
     printf(" &(*age): error\n");       // [error: invalid type argument of unary '*']
