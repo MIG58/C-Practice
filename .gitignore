@@ -1,3 +1,5 @@
 Leap_Year.c
 .vscode/
 *.exe
+~/./*
+/./fcfs
