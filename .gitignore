@@ -2,4 +2,4 @@ Leap_Year.c
 .vscode/
 *.exe
 ~/./*
-/./fcfs
+/CPU_Scheduling_Algo/./*
