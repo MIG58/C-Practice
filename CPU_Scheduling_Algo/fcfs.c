@@ -36,10 +36,16 @@ int main()
         printf("\nP[%d]\t\t%d\t\t%d\t\t%d", i + 1, bt[i], wt[i], tat[i]);
     }
 
-    awt = awt / i;
-    atat = atat / i;
+    awt = awt / n;
+    atat = atat / n;
     printf("\n\nAverage Waiting Time: %.2f", awt);
     printf("\nAverage Turnaround Time: %.2f\n", atat);
 
     return 0;
 }
+
+/*
+    Formula
+    wt = bt(n) + bt(n+1) , where wt init with 0
+    tat = wt + bt
+*/
